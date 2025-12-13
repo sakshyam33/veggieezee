@@ -268,8 +268,10 @@
                 <li><a href="#pricing">Pricing</a></li>
             </ul>
             <div class="auth-buttons">
-                <button class="btn-login">Login</button>
-                <button class="btn-signup">Sign Up</button>
+            <a href="{% url 'login' %}" style="text-decoration: none;">
+                <button class="btn-login">Login</button> </a>   
+            <a href="{% url 'signup' %}" style="text-decoration: none;">
+                <button class="btn-signup">Sign Up</button> </a> 
             </div>
         </nav>
     </header>
@@ -332,6 +334,7 @@
                 <a href="#privacy">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
             </div>
+            <p>Made with ❤️ for Farmers</p> 
             <p>&copy; 2025 Veggieeze. All rights reserved.</p>
         </div>
     </footer>

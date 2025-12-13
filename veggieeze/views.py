@@ -7,7 +7,10 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
   return render(request,"website/index.html")
-
+def trade(request):
+  return render(request,"trade/trade.html")
+def insights(request):
+  return render(request,"trade/insight.html")
 def signup(request):
   
     """
