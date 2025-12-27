@@ -13,12 +13,14 @@ body {
 }
 
 /* Header Styles */
-.header {
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 0;
-}
-
+  .header {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 .header-content {
   max-width: 1600px;
   margin: 0 auto;
@@ -28,12 +30,31 @@ body {
   justify-content: space-between;
   gap: 2rem;
 }
+      .logo {
+            width: 40px;
+            height: 40px;
+            background: #10b981;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+   .brand-text h1 {
+            font-size: 1.1rem;
+            color: #333;
+        }
+      .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+            .brand-text p {
+            font-size: 0.85rem;
+            color: #999;
+        }
 
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
 
 .logo svg {
   display: block;
@@ -56,26 +77,44 @@ body {
   display: flex;
   gap: 0.5rem;
 }
+     .nav-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+ .nav-btn {
+            padding: 0.5rem 1.25rem;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-.nav-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: transparent;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9375rem;
-  color: #6b7280;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: inherit;
-}
+        .nav-btn:hover {
+            background: #f9f9f9;
+        }
 
-.nav-btn:hover {
-  background: #f3f4f6;
-  color: #1f2937;
-}
+          .user-controls {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
 
 .nav-btn.active {
   background: #f3f4f6;
@@ -86,10 +125,9 @@ body {
 .header-actions {
   display: flex;
   gap: 0.5rem;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
-.icon-btn,
 .admin-btn {
   display: flex;
   align-items: center;
