@@ -120,10 +120,11 @@ def loginpage(request):
         # Find user by email
         user = User.objects.filter(email=email).first()
         if user is None:
-            return HttpResponse("No account found with this email address.")
+            messages.error(request, "No account found with this email address.")
+            return render(request, 'website/login.html')
         
-        # Authenticate user
-        user = authenticate(request, email=email, password=password)
+        # Authenticate using username (not email)
+        user = authenticate(request, username=user.username, password=password)
         
         if user is not None:
             # Login the user
@@ -133,9 +134,11 @@ def loginpage(request):
             request.session['email'] = email
             
             # Redirect to homepage or dashboard
+            messages.success(request, f"Welcome back, {user.first_name}!")
             return redirect('home') 
         else:
-            return HttpResponse("Incorrect password.")
+            messages.error(request, "Incorrect password.")
+            return render(request, 'website/login.html')
     
     return render(request, 'website/login.html')
 # def loginpage(request): 
